@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "stellar-origins",
+	"version": "${version}",
+	"name": "stellar origins",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/stellar-origins/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"haddle.stellarorigins.StellarOrigins"
+		],
+		"client": [
+			"haddle.stellarorigins.StellarOriginsClient"
+		]
+	},
+	"mixins": [
+		"stellar-origins.mixins.json",
+		{
+			"config": "stellar-origins.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
