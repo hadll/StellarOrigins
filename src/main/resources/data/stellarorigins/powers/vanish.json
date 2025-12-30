@@ -1,0 +1,10 @@
+{
+  "type": "origins:shader",
+  "name": "Vanish",
+  "description": "poof",
+  "shader": "minecraft:shaders/post/sobel.json",
+  "key": {
+    "key": "key.origins.primary_active",
+    "continuous": true
+  }
+}

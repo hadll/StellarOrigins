@@ -1,0 +1,7 @@
+{
+  "origins": [
+    "stellar-origins:astra"
+  ],
+  "replace": false,
+  "enabled": true
+}

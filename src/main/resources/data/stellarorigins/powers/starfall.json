@@ -1,0 +1,14 @@
+{
+  "type": "origins:modify_damage_taken",
+  "damage_condition": {
+    "type": "origins:from_falling"
+  },
+  "modifier": {
+    "operation": "set_total",
+    "value": 0
+  },
+  "self_action": {
+    "type": "origins:execute_command",
+    "command": "particle stellarorigins:starfall ~ ~0.1 ~"
+  }
+}
