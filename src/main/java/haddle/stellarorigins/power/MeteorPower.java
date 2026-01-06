@@ -57,6 +57,13 @@ public class MeteorPower extends ActiveCooldownPower {
         super.tick();
         flightTime++;
 
+        if (!usingPower) return;
+
+        if (endPos == null) {
+            this.setUsingPower(false);
+            return;
+        }
+
         if (flightTime <= maxFlightTime && usingPower){
             PlayerEntity player = (PlayerEntity) entity;
 
