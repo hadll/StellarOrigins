@@ -2,17 +2,16 @@
 	"schemaVersion": 1,
 	"id": "stellar-origins",
 	"version": "${version}",
-	"name": "stellar origins",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Stellar Origins",
+	"description": "Adds the Astra origin as well as a magic system called Starpower that they are uniquely able to harness",
 	"authors": [
-		"Me!"
+		"Haddle"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/hadll/StellarOrigins"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/stellar-origins/icon.png",
+	"icon": "assets/stellarorigins/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -20,6 +19,9 @@
 		],
 		"client": [
 			"haddle.stellarorigins.StellarOriginsClient"
+		],
+		"cardinal-components": [
+			"haddle.stellarorigins.registry.SOComponents"
 		]
 	},
 	"mixins": [
@@ -33,9 +35,17 @@
 		"fabricloader": ">=0.17.3",
 		"minecraft": "~1.19.2",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"origins": "*",
+		"satin": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"better-end-sky": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"stellarorigins:starpower_component"
+		]
 	}
+
 }

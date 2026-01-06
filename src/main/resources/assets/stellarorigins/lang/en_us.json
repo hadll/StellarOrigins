@@ -1,12 +1,10 @@
 {
-  "item.rain-world-origins.spear_item": "Spear",
-  "item.rain-world-origins.spear_item_crafted": "Spear",
-  "item.rain-world-origins.explosive_spear_item_crafted": "Explosive Spear",
-  "item.rain-world-origins.rubbish_item_crafted": "Rubbish",
-  "item.rain-world-origins.explosive_rubbish_item_crafted": "Explosive Rubbish",
-  "death.attack.ascension": "%1$s ascended",
-  "sounds.rain-world-origins.saint_mark": "Saint Ascending",
-  "sounds.rain-world-origins.karma_rise": "Karma Rising",
-  "sounds.rain-world-origins.karma_max": "Karma Max",
-  "sounds.rain-world-origins.karma_fall": "Karma Falling"
+  "sound.stellarorigins.launch_sound": "Starflight activates",
+  "sound.stellarorigins.starfall_sound": "Starfall cushions fall",
+  "sound.stellarorigins.meteor_sound": "Meteor lands",
+  "death.attack.parry_damage": "%1$s got parried by %2$s",
+  "death.attack.meteor_damage": "%1$s was blown away by %2$s",
+  "block.stellarorigins.starsteel_ore": "Starsteel Ore (WIP)",
+  "item.stellarorigins.raw_starsteel": "Dont mind me, this will get added later",
+  "itemGroup.stellarorigins.starsteel": "Starsteel"
 }

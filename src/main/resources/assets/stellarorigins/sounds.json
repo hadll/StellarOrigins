@@ -1,0 +1,26 @@
+{
+  "launch_sound": {
+    "subtitle": "sound.stellarorigins.launch_sound",
+    "sounds": [
+      "stellarorigins:launch_sound"
+    ]
+  },
+  "starfall_sound": {
+    "subtitle": "sound.stellarorigins.starfall_sound",
+    "sounds": [
+      "stellarorigins:starfall_sound"
+    ]
+  },
+  "parry_sound": {
+    "subtitle": "sound.stellarorigins.parry_sound",
+    "sounds": [
+      "stellarorigins:parry_sound"
+    ]
+  },
+  "meteor_sound": {
+    "subtitle": "sound.stellarorigins.meteor_sound",
+    "sounds": [
+      "stellarorigins:meteor_explosion"
+    ]
+  }
+}

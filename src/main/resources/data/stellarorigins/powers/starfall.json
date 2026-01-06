@@ -3,12 +3,27 @@
   "damage_condition": {
     "type": "origins:from_falling"
   },
+  "condition": {
+    "type": "origins:attempt_consume_starpower",
+    "cost": 5
+  },
   "modifier": {
     "operation": "set_total",
     "value": 0
   },
   "self_action": {
-    "type": "origins:execute_command",
-    "command": "particle stellarorigins:starfall ~ ~0.1 ~"
-  }
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "particle stellarorigins:starfall ~ ~0.1 ~"
+      },
+      {
+        "type": "origins:play_sound",
+        "sound": "stellarorigins:starfall_sound"
+      }
+    ]
+  },
+  "name": "Starfall [10 STARPOWER]",
+  "description" : "Catches your falls, making you able to survive any fall from any distance without a scratch."
 }

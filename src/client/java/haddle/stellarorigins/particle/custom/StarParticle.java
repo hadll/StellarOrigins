@@ -1,12 +1,15 @@
 package haddle.stellarorigins.particle.custom;
 
+import haddle.stellarorigins.particle.SpriteRotationParticle;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
+import net.minecraft.client.render.WorldRenderer;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Quaternion;
 
-@Environment(EnvType.CLIENT)
 public class StarParticle extends SpriteBillboardParticle {
 
 
@@ -14,7 +17,7 @@ public class StarParticle extends SpriteBillboardParticle {
                             SpriteProvider spriteSet, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
 
-        this.velocityMultiplier = 0.9f;
+        this.velocityMultiplier = 0.99f;
         this.x = xd;
         this.y = yd;
         this.z = zd;
@@ -23,9 +26,19 @@ public class StarParticle extends SpriteBillboardParticle {
         this.setSpriteForAge(spriteSet);
 
         this.red = 1f;
-        this.green = 1f;
-        this.blue = 1f;
+        this.green = 0.592f;
+        this.blue = 0.953f;
+
+        this.velocityX = xd + (Math.random() * (double)2.0F - (double)1.0F) * (double)0.1F;
+        this.velocityY = yd + (Math.random() * (double)2.0F - (double)1.0F) * (double)0.1F;
+        this.velocityZ = zd + (Math.random() * (double)2.0F - (double)1.0F) * (double)0.1F;
+        double d = (Math.random() + Math.random() + (double)1.0F) * (double)0.05F;
+        double e = Math.sqrt(this.velocityX * this.velocityX + this.velocityY * this.velocityY + this.velocityZ * this.velocityZ);
+        this.velocityX = this.velocityX * d;
+        this.velocityY = this.velocityY * d;
+        this.velocityZ = this.velocityZ * d;
     }
+
 
     @Override
     public void tick() {
@@ -54,5 +67,10 @@ public class StarParticle extends SpriteBillboardParticle {
                                        double dx, double dy, double dz) {
             return new StarParticle(level, x, y, z, this.sprites, dx, dy, dz);
         }
+    }
+
+    @Override
+    protected int getBrightness(float tint) {
+        return 255;
     }
 }

@@ -9,39 +9,71 @@
       }
     }
   },
+  "decrease": {
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "stellarorigins:parrytimer",
+      "operation": "add",
+      "change": -1
+    }
+  },
   "onuse": {
     "condition": {
-      "type": "origins:or",
+      "type": "origins:and",
       "conditions": [
         {
-          "type": "origins:equipped_item",
-          "equipment_slot": "mainhand",
-          "item_condition": {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "item": "minecraft:shield"
+          "type": "origins:or",
+          "conditions": [
+            {
+              "type": "origins:equipped_item",
+              "equipment_slot": "mainhand",
+              "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                  "item": "minecraft:shield"
+                }
+              }
+            },
+            {
+              "type": "origins:equipped_item",
+              "equipment_slot": "offhand",
+              "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                  "item": "minecraft:shield"
+                }
+              }
             }
-          }
+          ]
         },
         {
-          "type": "origins:equipped_item",
-          "equipment_slot": "offhand",
-          "item_condition": {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "item": "minecraft:shield"
-            }
-          }
+          "type": "origins:attempt_consume_starpower",
+          "cost": 25
         }
       ]
+
     },
     "type": "origins:active_self",
     "entity_action": {
-      "type": "origins:"
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "stellarorigins:parrytimer",
+          "change": 10,
+          "operation": "set"
+        },
+        {
+          "type": "origins:parry_particle"
+        }
+      ]
     },
     "key": {
       "key": "key.use",
       "continuous": false
     }
-  }
+  },
+  "hidden": true
 }

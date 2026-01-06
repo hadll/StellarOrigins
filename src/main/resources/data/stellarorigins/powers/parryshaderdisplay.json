@@ -1,0 +1,11 @@
+{
+  "type": "origins:shader",
+  "shader": "stellarorigins:shaders/post/parry.json",
+  "condition": {
+    "type": "origins:resource",
+    "resource": "stellarorigins:parryshadertimer",
+    "comparison": ">=",
+    "compare_to": 0
+  },
+  "hidden": true
+}

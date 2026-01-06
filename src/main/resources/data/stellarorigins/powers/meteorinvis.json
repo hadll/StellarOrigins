@@ -1,0 +1,9 @@
+{
+  "type": "origins:invisibility",
+  "condition": {
+    "type": "origins:is_using_power",
+    "power": "stellarorigins:meteor"
+  },
+  "render_armor": false,
+  "hidden": true
+}

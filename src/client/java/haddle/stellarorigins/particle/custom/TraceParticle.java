@@ -6,10 +6,12 @@ import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 
-public class StarParticle extends SpriteBillboardParticle {
+import static java.lang.Math.sqrt;
+
+public class TraceParticle extends SpriteBillboardParticle {
 
 
-    protected StarParticle(ClientWorld level, double xCoord, double yCoord, double zCoord,
+    protected TraceParticle(ClientWorld level, double xCoord, double yCoord, double zCoord,
                             SpriteProvider spriteSet, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
 
@@ -22,17 +24,12 @@ public class StarParticle extends SpriteBillboardParticle {
         this.setSpriteForAge(spriteSet);
 
         this.red = 1f;
-        this.green = 1f;
-        this.blue = 1f;
+        this.green = 0.592f;
+        this.blue = 0.953f;
 
-        this.velocityX = xd + (Math.random() * (double)2.0F - (double)1.0F) * (double)0.1F;
-        this.velocityY = yd + (Math.random() * (double)2.0F - (double)1.0F) * (double)0.1F;
-        this.velocityZ = zd + (Math.random() * (double)2.0F - (double)1.0F) * (double)0.1F;
-        double d = (Math.random() + Math.random() + (double)1.0F) * (double)0.05F;
-        double e = Math.sqrt(this.velocityX * this.velocityX + this.velocityY * this.velocityY + this.velocityZ * this.velocityZ);
-        this.velocityX = this.velocityX * d;
-        this.velocityY = this.velocityY * d;
-        this.velocityZ = this.velocityZ * d;
+        this.velocityX = xd;
+        this.velocityY = yd;
+        this.velocityZ = zd;
     }
 
 
@@ -44,6 +41,8 @@ public class StarParticle extends SpriteBillboardParticle {
 
     private void fadeOut() {
         this.alpha = (-(1/(float)maxAge) * age + 1);
+//        this.scale = (float)sqrt(this.velocityX*this.velocityX+this.velocityY*this.velocityY+this.velocityZ*this.velocityZ);
+        this.scale = ((1/(float)maxAge) * age);
     }
 
     @Override
@@ -61,7 +60,12 @@ public class StarParticle extends SpriteBillboardParticle {
 
         public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
                                        double dx, double dy, double dz) {
-            return new StarParticle(level, x, y, z, this.sprites, dx, dy, dz);
+            return new TraceParticle(level, x, y, z, this.sprites, dx, dy, dz);
         }
+    }
+
+    @Override
+    protected int getBrightness(float tint) {
+        return 255;
     }
 }

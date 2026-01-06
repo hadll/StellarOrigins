@@ -3,6 +3,7 @@
   "name": "Vanish",
   "description": "poof",
   "shader": "minecraft:shaders/post/sobel.json",
+  "loading_priority": 1,
   "key": {
     "key": "key.origins.primary_active",
     "continuous": true

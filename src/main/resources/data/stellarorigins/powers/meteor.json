@@ -1,10 +1,10 @@
 {
-  "type": "stellarorigins:launch",
-  "name": "Shooting Star",
-  "description": "Launches you in the direction you're looking",
+  "type": "stellarorigins:meteor",
+  "name": "Meteor [40 STARPOWER]",
+  "description": "Come crashing down to the ground, dealing damage to nearby entities proportional to how far you travelled",
   "loading_priority": 1,
   "key": {
-    "key": "key.jump",
+    "key": "key.origins.secondary_active",
     "continuous": false
   }
 }

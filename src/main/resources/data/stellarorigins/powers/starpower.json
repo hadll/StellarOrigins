@@ -1,0 +1,6 @@
+{
+  "type": "stellarorigins:starpower",
+  "name": "Starpower",
+  "description": "A resource drawn from the stars that allows you to use your powers.",
+  "loading_priority": 1
+}

@@ -1,0 +1,11 @@
+{
+  "type": "origins:action_over_time",
+  "interval": 1,
+  "entity_action": {
+    "type": "origins:change_resource",
+    "resource": "stellarorigins:parryshadertimer",
+    "operation": "add",
+    "change": -1
+  },
+  "hidden": true
+}

@@ -1,0 +1,29 @@
+{
+  "type": "origins:parry",
+  "modifier": {
+    "operation": "add_base_early",
+    "value": 0
+  },
+  "self_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:change_resource",
+        "resource": "stellarorigins:parryshadertimer",
+        "change": 2,
+        "operation": "set"
+      }
+    ]
+  },
+  "bientity_condition":{
+    "type": "origins:target_condition",
+    "condition": {
+      "type": "origins:resource",
+      "resource": "stellarorigins:parrytimer",
+      "comparison": ">=",
+      "compare_to": 0
+    }
+  },
+  "name": "Parry [25 STARPOWER]",
+  "description": "Makes you unable to use a shield, instead replacing it with a parry that if timed, redirects damage back to the attacker."
+}

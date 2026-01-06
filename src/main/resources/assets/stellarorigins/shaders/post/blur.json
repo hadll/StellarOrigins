@@ -4,7 +4,7 @@
     ],
     "passes": [
         {
-            "name": "blur",
+            "name": "stellarorigins:blur",
             "intarget": "minecraft:main",
             "outtarget": "swap",
             "uniforms": [
@@ -19,7 +19,7 @@
             ]
         },
         {
-            "name": "blur",
+            "name": "stellarorigins:blur",
             "intarget": "swap",
             "outtarget": "minecraft:main",
             "uniforms": [

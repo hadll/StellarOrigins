@@ -1,0 +1,9 @@
+{
+  "type": "origins:modify_insomnia_ticks",
+  "modifier": {
+    "operation": "set_total",
+    "value": 0
+  },
+  "name": "No Insomnia",
+  "description": "You will never spawn phantoms"
+}

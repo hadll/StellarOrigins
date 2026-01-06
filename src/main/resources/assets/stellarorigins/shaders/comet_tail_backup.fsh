@@ -16,5 +16,5 @@ void main() {
     // simple glow falloff
     float fade = smoothstep(1.0, 0.0, vUV.y);
 
-    fragColor = vec4(tex.rgb, tex.a * fade * uAlpha);
+    fragColor = vec4(1.0, 0.0, 0.0, 1.0);
 }

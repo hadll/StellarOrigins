@@ -10,20 +10,21 @@ import net.minecraft.client.particle.SpriteProvider;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.util.math.Quaternion;
+import net.minecraft.util.math.Vec3f;
 
-public class ShockwaveParticle extends SpriteRotationParticle {
-    private double scaleMult = 3;
+public class StarfallParticle extends SpriteRotationParticle {
+    private double scaleMult = 2;
 
-    protected ShockwaveParticle(ClientWorld level, double xCoord, double yCoord, double zCoord,
+    protected StarfallParticle(ClientWorld level, double xCoord, double yCoord, double zCoord,
                            SpriteProvider spriteSet, double xd, double yd, double zd) {
-        super(level, xCoord, yCoord, zCoord, xd, yd, zd, Quaternion.IDENTITY);
+        super(level, xCoord, yCoord, zCoord, xd, yd, zd, Quaternion.fromEulerXyzDegrees(new Vec3f(90,0,0)));
 
         this.velocityMultiplier = 0f;
         this.x = xd;
         this.y = yd;
         this.z = zd;
         this.scale *= 2F;
-        this.maxAge = 80;
+        this.maxAge = 40;
         this.setSpriteForAge(spriteSet);
 
         this.red = 1f;
@@ -67,7 +68,7 @@ public class ShockwaveParticle extends SpriteRotationParticle {
 
         public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
                                        double dx, double dy, double dz) {
-            return new StarParticle(level, x, y, z, this.sprites, dx, dy, dz);
+            return new StarfallParticle(level, x, y, z, this.sprites, dx, dy, dz);
         }
     }
 
@@ -76,3 +77,4 @@ public class ShockwaveParticle extends SpriteRotationParticle {
         return 255;
     }
 }
+

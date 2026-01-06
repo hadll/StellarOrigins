@@ -2,7 +2,18 @@
   "name": "Astra",
   "description": "wawa",
   "powers": [
-    "astralorigins:vanish"
+    "stellarorigins:starpower",
+    "stellarorigins:launch",
+    "stellarorigins:starfall",
+    "stellarorigins:parry",
+    "stellarorigins:parryactivation",
+    "stellarorigins:parrytimer",
+    "stellarorigins:parrypreventdamage",
+    "stellarorigins:meteor",
+    "stellarorigins:meteorinvis",
+    "stellarorigins:nophantoms",
+    "origins:burn_in_daylight",
+    "origins:light_armor"
   ],
   "icon": {
     "item": "minecraft:nether_star",

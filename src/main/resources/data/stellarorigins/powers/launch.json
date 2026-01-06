@@ -1,0 +1,10 @@
+{
+  "type": "stellarorigins:launch",
+  "name": "Starflight [3 STARPOWER]",
+  "description": "Launches you in the direction you're looking",
+  "loading_priority": 1,
+  "key": {
+    "key": "key.jump",
+    "continuous": false
+  }
+}
