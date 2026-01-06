@@ -72,6 +72,10 @@ public class SOPowers{
                     ParticleSpawnHelper.SpawnSyncedParticle(entity, SOParticles.PARRY_PARTICLE, spawnPos.x, spawnPos.y, spawnPos.z, -player.getPitch(), player.getHeadYaw(), 0);
 //                    playerWorld.addParticle(SOParticles.PARRY_PARTICLE, spawnPos.x, spawnPos.y, spawnPos.z, -player.getPitch(), -player.getHeadYaw(), 0);
                 }));
+        register(new ActionFactory<>(Apoli.identifier("consume_starpower"), new SerializableData().add("cost", SerializableDataTypes.DOUBLE),
+                (data, entity) -> {
+                    StellarOrigins.STARPOWER_HELPER.consumeStarpower(entity, data.getDouble("cost"));
+                }));
         register(ParryPower::createFactory);
 
         StellarOrigins.LOGGER.info(StellarOrigins.MOD_ID+": Powers Loaded!");
