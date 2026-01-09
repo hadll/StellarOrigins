@@ -93,7 +93,7 @@ public class MeteorPower extends ActiveCooldownPower {
     private float calculateDamage(Entity target){
         double distance_mult = 5-target.getPos().distanceTo(endPos);
         double charge_power = Math.max(Math.min((flightTime-5)/10.0,1.0),0.0);
-        double power_mult = 5;
+        double power_mult = 4;
         return (float) (charge_power*distance_mult*power_mult);
     }
 
