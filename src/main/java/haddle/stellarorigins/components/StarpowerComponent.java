@@ -5,7 +5,7 @@ import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
 import dev.onyxstudios.cca.api.v3.component.tick.ServerTickingComponent;
 
 // Your own component interface. You still need to register it!
-public interface StarpowerComponent extends Component, AutoSyncedComponent {
+public interface StarpowerComponent extends Component {
     double getValue();
     void change(double amount);
     double starpower = 0;

@@ -22,7 +22,9 @@ public class StarpowerHelper {
     }
 
     public void updateStarpower(Entity entity){
-        SOComponents.STARPOWER.get(entity).change(starpower_change);
+        if (!entity.getWorld().isClient()){
+            SOComponents.STARPOWER.get(entity).change(starpower_change);
+        }
         this.starpower_change = 0.0;
         this.starpower = SOComponents.STARPOWER.get(entity).getValue();
     }
