@@ -3,7 +3,6 @@ package haddle.stellarorigins.components;
 import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
 import haddle.stellarorigins.StellarOrigins;
 import haddle.stellarorigins.registry.SOComponents;
-import haddle.stellarorigins.util.StarpowerHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;

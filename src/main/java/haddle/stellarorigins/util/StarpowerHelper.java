@@ -1,12 +1,8 @@
 package haddle.stellarorigins.util;
 
-import haddle.stellarorigins.power.StarpowerPower;
 import haddle.stellarorigins.registry.SOComponents;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NbtDouble;
-import net.minecraft.server.dedicated.command.SaveOffCommand;
 
 public class StarpowerHelper {
 
@@ -15,10 +11,6 @@ public class StarpowerHelper {
 
     public double getStarpower(Entity entity){
         return starpower;
-    }
-
-    public NbtDouble toTag(double d){
-        return NbtDouble.of(d);
     }
 
     public void updateStarpower(Entity entity){

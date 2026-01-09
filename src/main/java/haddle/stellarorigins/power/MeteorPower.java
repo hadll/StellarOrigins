@@ -1,26 +1,21 @@
 package haddle.stellarorigins.power;
 
-import com.mojang.authlib.minecraft.client.MinecraftClient;
+
 import haddle.stellarorigins.StellarOrigins;
 import haddle.stellarorigins.registry.SODamageSources;
 import haddle.stellarorigins.registry.SOParticles;
 import haddle.stellarorigins.registry.SOSounds;
 import haddle.stellarorigins.util.ParticleSpawnHelper;
-import haddle.stellarorigins.util.StarpowerHelper;
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.apace100.apoli.power.ActiveCooldownPower;
 import io.github.apace100.apoli.power.PowerType;
 import io.github.apace100.apoli.util.HudRender;
-import net.fabricmc.loader.impl.lib.sat4j.core.Vec;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.ProjectileUtil;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Box;
@@ -44,8 +39,6 @@ public class MeteorPower extends ActiveCooldownPower {
     private boolean usingPower = false;
     private double flightTime = 0;
     public final double maxFlightTime = 50;
-
-    private StatusEffectInstance storedInvis;
 
     public MeteorPower(PowerType<?> type, LivingEntity entity, int cooldownDuration, HudRender hudRender, Consumer<Entity> activeFunction) {
         super(type, entity, cooldownDuration, hudRender, activeFunction);

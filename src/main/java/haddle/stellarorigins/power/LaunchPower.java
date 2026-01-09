@@ -2,22 +2,16 @@ package haddle.stellarorigins.power;
 
 import haddle.stellarorigins.StellarOrigins;
 import haddle.stellarorigins.events.EntityFallCallback;
-import haddle.stellarorigins.registry.SOComponents;
 import haddle.stellarorigins.registry.SOParticles;
-import haddle.stellarorigins.registry.SOPowers;
 import haddle.stellarorigins.registry.SOSounds;
 import haddle.stellarorigins.util.ParticleSpawnHelper;
-import haddle.stellarorigins.util.StarpowerHelper;
 import io.github.apace100.apoli.power.ActiveCooldownPower;
 import io.github.apace100.apoli.power.PowerType;
 import io.github.apace100.apoli.util.HudRender;
 import java.util.function.Consumer;
-
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -56,7 +50,6 @@ public class LaunchPower extends ActiveCooldownPower {
 
 
         // spawn particles
-        World playerWorld = player.getWorld();
         Vec3d midPos = player.getPos().add(player.getEyePos()).multiply(0.5);
         Vec3d otherVec;
         if (abs(eyeDir.x) > 0.95) {
@@ -83,7 +76,6 @@ public class LaunchPower extends ActiveCooldownPower {
 //        if (!player.world.isClient) {
             // Play the sound as if it was coming from the entity.
             player.playSound(SOSounds.LAUNCH_SOUND, 2f, 0.7f);
-            StellarOrigins.LOGGER.debug("sound played!");
 //        }
 //        playerWorld.addParticle(SOParticles.STAR_PARTICLE, eyeDir.x + feetPos.x, eyeDir.y + feetPos.y, eyeDir.z + feetPos.z, 0, 0, 0);
 //        playerWorld.addParticle(SOParticles.STAR_PARTICLE, m1.x + feetPos.x, m1.y + feetPos.y, m1.z + feetPos.z, 0, 0, 0);
@@ -128,7 +120,6 @@ public class LaunchPower extends ActiveCooldownPower {
             // launch the player
             Vec3d eyeDir = new Vec3d(lookDir.getX(), 0.5, lookDir.getZ()).normalize();
             // spawn particles
-            World playerWorld = player.getWorld();
             Vec3d midPos = player.getPos().add(player.getEyePos()).multiply(0.5);
             Vec3d otherVec;
             if (abs(eyeDir.x) > 0.95) {
