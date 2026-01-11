@@ -143,7 +143,7 @@ public class MeteorPower extends ActiveCooldownPower {
         }else {
             willLand = false;
         }
-        ParticleSpawnHelper.SpawnSyncedParticle(entity, SOParticles.METEOR_PARTICLE, player.getX(),  player.getY(), player.getZ(), endPos.x, endPos.y, endPos.z);
+        ParticleSpawnHelper.SpawnSyncedParticle(entity, SOParticles.METEOR_PARTICLE, player.getX(),  player.getY(), player.getZ(), endPos.x, endPos.y, endPos.z, maxFlightTime*speed*20);
 //        player.world.addParticle(SOParticles.TRAIL_PARTICLE, player.getX(),  player.getY(), player.getZ(), endPos.x, endPos.y, endPos.z);
     }
 
