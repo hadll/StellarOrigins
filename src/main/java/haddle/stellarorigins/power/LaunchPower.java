@@ -20,7 +20,7 @@ import static java.lang.Math.*;
 
 public class LaunchPower extends ActiveCooldownPower {
     private final int waveDashTicks = 5;
-    private int ticksSinceLaunch = 5;
+    private int ticksSinceLaunch = 10;
     private boolean usedWaveDash = false;
 
     public double cost = 3;
