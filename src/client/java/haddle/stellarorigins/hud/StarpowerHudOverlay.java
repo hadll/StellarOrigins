@@ -2,12 +2,18 @@ package haddle.stellarorigins.hud;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import haddle.stellarorigins.StellarOrigins;
+import haddle.stellarorigins.power.ParryPower;
+import haddle.stellarorigins.power.StarpowerPower;
 import haddle.stellarorigins.util.StarpowerHelper;
+import io.github.apace100.apoli.component.PowerHolderComponent;
+import io.github.apace100.apoli.power.Power;
+import io.github.apace100.apoli.power.PowerType;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -31,12 +37,22 @@ public class StarpowerHudOverlay implements HudRenderCallback {
     // this shit needs replacing with a mixin but it works for now
     @Override
     public void onHudRender(MatrixStack matrixStack, float tickDelta){
+
+        PlayerEntity player = MinecraftClient.getInstance().player;
+
+        StarpowerPower power = PowerHolderComponent.getPowers(player, StarpowerPower.class)
+                .stream()
+                .findFirst()
+                .orElse(null);
+
         int x = 0;
         int y = 0;
         double starpower = 0;
         int frame = 0;
 
+        starpower = StellarOrigins.STARPOWER_HELPER.getStarpower(player);
 
+        if (power == null && starpower <= 1) return;
 
         MinecraftClient client = MinecraftClient.getInstance();
 
@@ -45,7 +61,6 @@ public class StarpowerHudOverlay implements HudRenderCallback {
 
             x = 0;
             y = height;
-            starpower = StellarOrigins.STARPOWER_HELPER.getStarpower(client.player);
 
             long time = client.world.getTime()%20;
             frame = (int) (time/5);
