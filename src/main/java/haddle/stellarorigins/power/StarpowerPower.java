@@ -24,14 +24,12 @@ public class StarpowerPower extends VariableIntPower {
     private boolean exposedToNight(){
         BlockPos blockPos = entity.getVehicle() instanceof BoatEntity ? (new BlockPos(entity.getX(), (double) Math.round(entity.getY()), entity.getZ())).up() : new BlockPos(entity.getX(), (double) Math.round(entity.getY()), entity.getZ());
         long time;
-        if (entity.getWorld().getRegistryKey() == World.END){
-            time = 16000;
-        } else if (entity.getWorld().getRegistryKey() == World.NETHER) {
+        if (entity.getWorld().getRegistryKey() == World.OVERWORLD){
+            time = entity.getWorld().getTimeOfDay() % 24000;
+        } else {
             time = 0;
-        }else {
-            time = entity.getWorld().getTimeOfDay();
         }
-        return entity.world.isSkyVisible(blockPos) && time >= 13000 && time < 23000;
+        return entity.world.isSkyVisible(blockPos) && time >= 12000 && time < 24000;
     }
 
     @Override
