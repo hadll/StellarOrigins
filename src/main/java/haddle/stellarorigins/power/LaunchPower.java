@@ -87,7 +87,9 @@ public class LaunchPower extends ActiveCooldownPower {
         PlayerEntity player = (PlayerEntity) entity;
 
         if (!player.isOnGround() && StellarOrigins.STARPOWER_HELPER.attemptConsumeStarpower(entity, cost)){
-            launch(player);
+            if (player.world.isClient()){
+                launch(player);
+            }
             ticksSinceLaunch = 0;
             usedWaveDash = false;
         }
