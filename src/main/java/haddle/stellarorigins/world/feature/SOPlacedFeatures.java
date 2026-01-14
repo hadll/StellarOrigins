@@ -9,7 +9,7 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 
 public class SOPlacedFeatures {
-    public static final RegistryEntry<PlacedFeature> STARSTEEL_ORE_PLACED = PlacedFeatures.register("starsteel_ore_placed", SOConfiguredFeatures.STARSTEEL_ORE, modifiersWithCount(10, HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(0), YOffset.aboveBottom(50))));
+    public static final RegistryEntry<PlacedFeature> STELLARIUM_ORE_PLACED = PlacedFeatures.register("stellarium_ore_placed", SOConfiguredFeatures.STELLARIUM_ORE, modifiersWithCount(10, HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(0), YOffset.aboveBottom(50))));
 
 
 

@@ -13,12 +13,12 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import java.util.List;
 
 public class SOConfiguredFeatures {
-    public static final List<OreFeatureConfig.Target> END_STARSTEEL_ORES = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), SOBlocks.STARSTEEL_ORE.getDefaultState())
+    public static final List<OreFeatureConfig.Target> END_STELLARIUM_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), SOBlocks.STELLARIUM_ORE.getDefaultState())
     );
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> STARSTEEL_ORE =
-            ConfiguredFeatures.register("starsteel_ore", Feature.ORE, new OreFeatureConfig(END_STARSTEEL_ORES, 10));
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> STELLARIUM_ORE =
+            ConfiguredFeatures.register("stellarium_ore", Feature.ORE, new OreFeatureConfig(END_STELLARIUM_ORES, 10));
 
     public static void init(){
         StellarOrigins.LOGGER.info(StellarOrigins.MOD_ID+": Configured Features Loaded!");

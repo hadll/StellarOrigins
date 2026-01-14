@@ -4,7 +4,8 @@
   "sound.stellarorigins.meteor_sound": "Meteor lands",
   "death.attack.parry_damage": "%1$s got parried by %2$s",
   "death.attack.meteor_damage": "%1$s was blown away by %2$s",
-  "block.stellarorigins.starsteel_ore": "Starsteel Ore (WIP)",
-  "item.stellarorigins.raw_starsteel": "Dont mind me, this will get added later",
+  "block.stellarorigins.stellarium_ore": "Stellarium Ore",
+  "item.stellarorigins.stellarium": "Stellarium",
+  "item.stellarorigins.starsteel_vial": "Starsteel Vial",
   "itemGroup.stellarorigins.starsteel": "Starsteel"
 }

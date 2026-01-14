@@ -4,7 +4,7 @@
   "death.attack.parry_damage": "%2$s did not sugarcoat it and %1$s felt it",
   "sound.stellarorigins.meteor_sound": "Your mother",
   "death.attack.meteor_damage": "%1$s was crushed under the mass of %2$s",
-  "block.stellarorigins.starsteel_ore": "Shiny Rock (WIP)",
-  "item.stellarorigins.raw_starsteel": "Dont mind me, this will get added later",
+  "block.stellarorigins.stellarium_ore": "Shiny Star Rock",
+  "item.stellarorigins.stellarium": "Chunk Of Shiny Star Rock",
   "itemGroup.stellarorigins.starsteel": "Shinier Rock"
 }
