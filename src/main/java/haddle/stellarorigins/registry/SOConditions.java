@@ -58,6 +58,10 @@ public class SOConditions {
             (data, entity) -> {
                 return StellarOrigins.STARPOWER_HELPER.attemptConsumeStarpower(entity, data.get("cost"));
             }));
+        register(new ConditionFactory<>(Apoli.identifier("check_starpower"), new SerializableData().add("cost",  SerializableDataTypes.DOUBLE),
+                (data, entity) -> {
+                    return (StellarOrigins.STARPOWER_HELPER.getStarpower(entity) >= (double) data.get("cost"));
+                }));
     }
 
     private static void register(ConditionFactory<Entity> conditionFactory) {
