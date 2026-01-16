@@ -29,7 +29,7 @@ public class StarpowerPower extends VariableIntPower {
         } else {
             time = 0;
         }
-        return entity.world.isSkyVisible(blockPos) && time >= 12000 && time < 24000;
+        return entity.world.isSkyVisible(blockPos) && time >= 12000;
     }
 
     @Override
