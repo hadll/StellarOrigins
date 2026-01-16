@@ -44,7 +44,6 @@ public class StarpowerConsumable extends Item {
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         int usedTicks = getMaxUseTime(stack) - remainingUseTicks;
-        System.out.println(remainingUseTicks);
         if (!world.isClient && user instanceof PlayerEntity player && usedTicks >= useTime) {
             stack.damage(1, user, (e) -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
             StellarOrigins.STARPOWER_HELPER.consumeStarpower(user, 30);
