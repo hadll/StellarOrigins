@@ -86,7 +86,7 @@ public class LaunchPower extends ActiveCooldownPower {
     public void onUse() {
         PlayerEntity player = (PlayerEntity) entity;
 
-        if (!player.isOnGround() && StellarOrigins.STARPOWER_HELPER.attemptConsumeStarpower(entity, cost)){
+        if (StellarOrigins.STARPOWER_HELPER.attemptConsumeStarpower(entity, cost)){
             if (player.world.isClient()){
                 launch(player);
             }
@@ -114,9 +114,8 @@ public class LaunchPower extends ActiveCooldownPower {
         super.tick();
         ticksSinceLaunch ++;
         if (ticksSinceLaunch < waveDashTicks && player.isOnGround() && !usedWaveDash) {
-//            System.out.println(entity.getName());
-            Vec3d lookDir = player.getRotationVec(0f);
-            player.addVelocity(lookDir.getX(), 0.7f, lookDir.getZ()); // <-- this isnt working for some reason
+            Vec3d lookDir = player.getRotationVec(0f).multiply(2);
+            player.addVelocity(lookDir.getX(), 0.7f, lookDir.getZ());
             player.velocityModified = true;
             usedWaveDash = true;
             // launch the player
