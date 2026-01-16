@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "stellarorigins:stellarium_ore"
+    "stellarorigins:stellarium_ore",
+    "stellarorigins:stellarium_block",
+    "stellarorigins:stellarium_charged_block"
   ]
 }

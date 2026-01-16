@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "stellarorigins:block/stellarium_charged_block"
+  }
+}

@@ -5,7 +5,10 @@
   "death.attack.parry_damage": "%1$s got parried by %2$s",
   "death.attack.meteor_damage": "%1$s was blown away by %2$s",
   "block.stellarorigins.stellarium_ore": "Stellarium Ore",
+  "block.stellarorigins.stellarium_block": "Block of Stellarium",
+  "block.stellarorigins.stellarium_charged_block": "Block of Charged Stellarium",
   "item.stellarorigins.stellarium": "Stellarium",
+  "item.stellarorigins.stellarium_charged": "Charged Stellarium",
   "item.stellarorigins.starsteel_vial": "Starsteel Vial",
   "itemGroup.stellarorigins.starsteel": "Starsteel"
 }
