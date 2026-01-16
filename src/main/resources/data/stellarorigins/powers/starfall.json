@@ -7,6 +7,10 @@
     "operation": "set_total",
     "value": 0
   },
+  "condition": {
+    "type": "origins:check_starpower",
+    "cost": 5
+  },
   "self_action": {
     "type": "origins:and",
     "actions": [
@@ -17,12 +21,12 @@
       {
         "type": "origins:play_sound",
         "sound": "stellarorigins:starfall_sound"
+      },
+      {
+        "type": "origins:consume_starpower",
+        "cost": -5
       }
-    ],
-    "condition": {
-      "type": "origins:attempt_consume_starpower",
-      "cost": 5
-    }
+    ]
   },
   "name": "Starfall [5 STARPOWER]",
   "description" : "Catches your falls, making you able to survive any fall from any distance without a scratch."
