@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "stellarorigins:stellarium"
+      "item": "stellarorigins:stellarium_charged"
     },
     "_": {
       "item": "minecraft:iron_ingot"
