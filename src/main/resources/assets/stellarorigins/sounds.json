@@ -22,5 +22,11 @@
     "sounds": [
       "stellarorigins:meteor_explosion"
     ]
+  },
+  "recharge_sound": {
+    "subtitle": "sound.stellarorigins.recharge_sound",
+    "sounds": [
+      "stellarorigins:recharge_sound"
+    ]
   }
 }

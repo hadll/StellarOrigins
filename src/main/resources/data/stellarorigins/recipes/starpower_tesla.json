@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "stellarorigins:stellarium"
+    },
+    "_": {
+      "item": "minecraft:iron_ingot"
+    },
+    "|": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "pattern": [
+    "_#_",
+    "|#|",
+    "_#_"
+  ],
+  "result": {
+    "item": "stellarorigins:starpower_taser"
+  }
+}

@@ -3,6 +3,7 @@ package haddle.stellarorigins.registry;
 import haddle.stellarorigins.StellarOrigins;
 import haddle.stellarorigins.damagesources.MeteorDamageSource;
 import haddle.stellarorigins.damagesources.ParryDamageSource;
+import haddle.stellarorigins.damagesources.VialDamageSource;
 import io.github.apace100.calio.mixin.DamageSourceAccessor;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
@@ -18,4 +19,6 @@ public class SODamageSources {
    public static DamageSource meteor(PlayerEntity attacker) {
       return new MeteorDamageSource(attacker);
    }
+   public static DamageSource vial() {return new VialDamageSource();}
+
 }

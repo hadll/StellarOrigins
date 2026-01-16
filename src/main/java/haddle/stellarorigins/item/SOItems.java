@@ -13,8 +13,8 @@ public class SOItems {
             new Item(new FabricItemSettings().group(SOItemGroups.STARSTEEL)));
     public static final Item STELLARIUM_CHARGED = registerItem("stellarium_charged",
             new Item(new FabricItemSettings().group(SOItemGroups.STARSTEEL)));
-    public static final Item STARSTEEL_VIAL = registerItem("starsteel_vial",
-            new Item(new FabricItemSettings().group(SOItemGroups.STARSTEEL)));
+    public static final Item STARPOWER_TASER = registerItem("starpower_taser",
+            new StarpowerConsumable(new FabricItemSettings().group(SOItemGroups.STARSTEEL)));
 
 
     private static Item registerItem(String name, Item item){

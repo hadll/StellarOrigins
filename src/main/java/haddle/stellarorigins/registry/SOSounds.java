@@ -10,6 +10,7 @@ public class SOSounds {
     public static final SoundEvent STARFALL_SOUND = registerSoundEvent("starfall_sound");
     public static final SoundEvent PARRY_SOUND = registerSoundEvent("parry_sound");
     public static final SoundEvent METEOR_SOUND = registerSoundEvent("meteor_sound");
+    public static final SoundEvent RECHARGE_SOUND = registerSoundEvent("recharge_sound");
 
 
     private static SoundEvent registerSoundEvent(String name){
